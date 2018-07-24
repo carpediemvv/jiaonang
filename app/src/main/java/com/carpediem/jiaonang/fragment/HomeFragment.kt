@@ -23,7 +23,7 @@ class HomeFragment : Fragment() {
 
     //第一次提交
     private var columnCount = 1
-
+    //第二次提交
     private var listener: OnListFragmentInteractionListener? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
