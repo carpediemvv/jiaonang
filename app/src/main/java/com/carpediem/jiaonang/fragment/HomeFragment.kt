@@ -15,9 +15,7 @@ import com.carpediem.jiaonang.fragment.dummy.DummyContent
 import com.carpediem.jiaonang.fragment.dummy.DummyContent.DummyItem
 
 /**
- * A fragment representing a list of Items.
- * Activities containing this fragment MUST implement the
- * [HomeFragment.OnListFragmentInteractionListener] interface.
+ *
  */
 class HomeFragment : Fragment() {
 
