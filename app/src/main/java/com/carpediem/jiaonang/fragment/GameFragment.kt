@@ -17,11 +17,13 @@ import com.carpediem.jiaonang.fragment.dummy.DummyContent.DummyItem
 /**
  * A fragment representing a list of Items.
  * Activities containing this fragment MUST implement the
- * [HomeFragment.OnListFragmentInteractionListener] interface.
+ * [GameFragment.OnListFragmentInteractionListener] interface.
  */
-class HomeFragment : Fragment() {
+class GameFragment : Fragment() {
 
+    // TODO: Customize parameters
     private var columnCount = 1
+
     private var listener: OnListFragmentInteractionListener? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -32,10 +34,9 @@ class HomeFragment : Fragment() {
         }
     }
 
-    //第三次提交
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
-        val view = inflater.inflate(R.layout.fragment_home_list, container, false)
+        val view = inflater.inflate(R.layout.fragment_game_list, container, false)
 
         // Set the adapter
         if (view is RecyclerView) {
@@ -44,7 +45,7 @@ class HomeFragment : Fragment() {
                     columnCount <= 1 -> LinearLayoutManager(context)
                     else -> GridLayoutManager(context, columnCount)
                 }
-                adapter = MyHomeRecyclerViewAdapter(DummyContent.ITEMS, listener)
+                adapter = MyGameRecyclerViewAdapter(DummyContent.ITEMS, listener)
             }
         }
         return view
@@ -88,7 +89,7 @@ class HomeFragment : Fragment() {
         // TODO: Customize parameter initialization
         @JvmStatic
         fun newInstance(columnCount: Int) =
-                HomeFragment().apply {
+                GameFragment().apply {
                     arguments = Bundle().apply {
                         putInt(ARG_COLUMN_COUNT, columnCount)
                     }
